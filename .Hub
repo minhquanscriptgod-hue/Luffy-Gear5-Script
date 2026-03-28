@@ -25,7 +25,7 @@ local function QuickLoad(url)
     return false
 end
 
-local url = "https://raw.githubusercontent.com/minhquanscriptgod-hue/Luffy-Script-God/main/luffy-hub.quan868"
+local url = "https://raw.githubusercontent.com/minhquanscriptgod-hue/Luffy-Script-God/refs/heads/main/Luffy-HUB.Quan868"
 
 task.spawn(function()
     print("[SYSTEM]: Fetching Luffy Data...")
