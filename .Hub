@@ -1,0 +1,38 @@
+--cố lên đi em sắp lấy đc source rồi
+local startTick = tick()
+local GS = game.GetService
+local Players = GS(game, "Players")
+local LP = Players.LocalPlayer
+
+print("------------------------------------------")
+print("██╗     ██╗   ██╗ ███████╗ ███████╗ ██╗   ██╗")
+print("██║     ██║   ██║ ██╔════╝ ██╔════╝ ╚██╗ ██╔╝")
+print("██║     ██║   ██║ █████╗   █████╗    ╚████╔╝ ")
+print("██║     ██║   ██║ ██╔══╝   ██╔══╝     ╚██╔╝  ")
+print("███████╗╚██████╔╝ ██║      ██║         ██║   ")
+print("╚══════╝ ╚═════╝  ╚═╝      ╚═╝         ╚═╝   ")
+print("------------------------------------------")
+
+local function QuickLoad(url)
+    local s, r = pcall(function() return game:HttpGet(url) end)
+    if s and r then
+        local f = loadstring(r)
+        if f then
+            task.spawn(f)
+            return true
+        end
+    end
+    return false
+end
+
+local url = "https://raw.githubusercontent.com/minhquanscriptgod-hue/Luffy-Script-God/main/luffy-hub.quan868"
+
+task.spawn(function()
+    print("[SYSTEM]: Fetching Luffy Data...")
+    if QuickLoad(url) then
+        print(string.format("[SUCCESS]: Loaded in %.4f seconds!", tick() - startTick))
+    else
+        warn("[ERROR]: Load Failed!")
+    end
+end)
+print("------------------------------------------")
